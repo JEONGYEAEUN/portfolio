@@ -1,0 +1,339 @@
+/* reset */
+
+* {
+  margin: 0;
+  padding: 0;
+}
+
+a {
+  text-decoration: none;
+  color: inherit;
+}
+
+ul,
+ol {
+  list-style: none;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  font-size: inherit;
+  font-weight: normal;
+}
+
+address,
+i,
+em {
+  font-style: normal;
+}
+
+strong,
+b {
+  font-weight: normal;
+}
+
+table {
+  border-collapse: collapse;
+}
+
+img {
+  max-width: 100%;
+}
+
+h1 {
+  line-height: 0.8em
+}
+
+/* font */
+
+@import url("https://cdn.jsdelivr.net/gh/orioncactus/pretendard@v1.3.8/dist/web/static/pretendard-dynamic-subset.css");
+
+/* ----------------------------- */
+
+
+/* layout */
+
+.contents_wrap {}
+
+.contents_wrap>div#page {
+  height: 100vh;
+}
+
+.intro {
+  position: relative;
+  font-family: Pretendard;
+  overflow: hidden;
+}
+
+.intro h1 {
+  padding-right: 20px;
+}
+
+.introTypo {
+  width: 1100px;
+  border: 1px solid red;
+  text-align: left;
+  position: absolute;
+  left: 50%;
+  top: 40%;
+  transform: translateY(-40%)translateX(-50%);
+  line-height: 0.79;
+  font-weight: 900;
+  font-size: 11rem;
+  color: #0d32ff;
+}
+
+@keyframes typeani {
+  0% {
+    border-right: 0.09em solid #0d32ff;
+  }
+
+  50% {
+    border-right: 0.09em solid transparent;
+  }
+
+  100% {
+    border-right: 0.09em solid #0d32ff;
+  }
+}
+
+
+/* ------------------------------------ */
+
+.introTypo h1 {
+  overflow: hidden;
+  display: inline;
+  font-weight: 900;
+  animation: typeani 1s linear 0s infinite;
+}
+
+
+/* --------------------------------------- */
+
+.intrologo>img {
+  display: block;
+  width: 74px;
+  position: absolute;
+  top: 20px;
+  left: 50%;
+  transform: translateX(-50%);
+  object-fit: contain;
+  animation: logomove 5s linear 0s infinite;
+  cursor: pointer;
+}
+
+@keyframes logomove {
+  0% {
+    transform: translateY(30%);
+  }
+
+  50% {
+    transform: translateY(0)
+  }
+
+  100% {
+    transform: translateY(30%)
+  }
+}
+
+.introiconM {
+  width: 274px;
+  position: absolute;
+  top: 60%;
+  right: 24%;
+}
+
+.intro>ul {
+  display: flex;
+  position: absolute;
+  top: 22%;
+  left: 23%;
+}
+
+.intro>ul>li {
+  width: 48px;
+  height: 48px;
+  background: #0d32ff;
+  border-radius: 50%;
+  position: relative;
+  margin-right: 26px;
+}
+
+.intro>ul>li:last-of-type {
+  margin-right: 0;
+}
+
+
+
+.intro>ul>li>i {
+  color: #fff;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  font-size: 1.4rem;
+}
+
+.icon {
+  display: flex;
+  border: 1px solid red;
+  justify-content: center;
+  margin-top: 660px;
+}
+
+.Iphone {
+  width: 200px;
+  border: 1px solid red;
+  margin-right: 30px;
+  padding-top: 100px;
+  /* height: 400px; */
+}
+
+.Ipc {
+  width: 580px;
+  border: 1px solid red;
+}
+
+.Itab {
+  width: 320px;
+  border: 1px solid red;
+  margin-top: 30px;
+  margin-left: 30px;
+}
+
+/* sidemenu------------------------------------------- */
+
+nav {
+  position: fixed;
+  right: 0;
+  top: 0;
+  width: 600px;
+  height: 100vh;
+  background: #0d32ff;
+  transition: all 0.7s ease 0s;
+  box-sizing: border-box;
+  font-family: Pretendard;
+  border-bottom: 80px solid #fff;
+  transform: translateX(100%);
+
+}
+
+nav.on {
+  transform: translateX(0%);
+}
+
+.gnb {}
+
+.gnb>li>a {
+  border: 1px solid white;
+  text-align: center;
+  display: block;
+  font-size: 7rem;
+  font-weight: 800;
+  color: transparent;
+  -webkit-text-stroke: 0.5px #fff;
+  line-height: 86%;
+  transition: all 0.2s ease 0s;
+  letter-spacing: -3px;
+}
+
+.gnb>li>a:hover {
+  color: #fff;
+}
+
+.sideM {
+  border: 1px solid red;
+  fill: #fff;
+  width: 140px;
+  display: block;
+  margin: 0 auto;
+  margin-top: 30px;
+  margin-bottom: 50px;
+
+
+}
+
+.sideclose {
+  border: 1px solid red;
+  color: #fff;
+  font-size: 4rem;
+  cursor: pointer;
+  padding: 10px;
+}
+
+/* --------------------------------------- */
+
+.about {
+  position: relative;
+  height: 100vh;
+}
+
+.typo {
+  height: 50vh;
+  background: #0d32ff;
+  font-family: Pretendard;
+  color: #fff;
+}
+
+.typo>h2 {
+  font-size: 10.5rem;
+  font-weight: 900;
+  line-height: 0.79;
+  position: absolute;
+  top: 0;
+  left: 30%;
+  margin-top: 10px;
+  transform: translateX(-30%);
+}
+
+.typo>ul {
+  display: flex;
+  position: absolute;
+  font-size: 1.4rem;
+  left: 25%;
+  transform: translate(-35%, -29%);
+  top: 29%;
+  padding-top: 6px;
+}
+
+.typo>ul>li {
+  padding: 4px;
+  opacity: 0;
+}
+
+.typo>ul>li:nth-of-type(1) {
+  transition: all 0.5s ease 0s;
+}
+
+.typo>ul>li:nth-of-type(2) {
+  transition: all 0.5s ease 0.25s;
+}
+
+.typo>ul>li:nth-of-type(3) {
+  transition: all 0.5s ease 0.5s;
+}
+
+.typo>ul>li:nth-of-type(4) {
+  transition: all 0.5s ease 0.75s;
+}
+
+.typo>ul>li:nth-of-type(5) {
+  transition: all 0.5s ease 1s;
+}
+
+.typo>ul>li.on {
+  transform: translate(0px);
+  opacity: 1;
+}
+
+
+
+.profile {
+  height: 50vh;
+  background: #fff;
+
+}
