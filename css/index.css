@@ -59,7 +59,7 @@ h1 {
 
 .contents_wrap {}
 
-.contents_wrap>div#page {
+.contents_wrap>div {
   height: 100vh;
 }
 
@@ -75,7 +75,6 @@ h1 {
 
 .introTypo {
   width: 1100px;
-  border: 1px solid red;
   text-align: left;
   position: absolute;
   left: 50%;
@@ -151,7 +150,7 @@ h1 {
   display: flex;
   position: absolute;
   top: 22%;
-  left: 23%;
+  left: 21.5%;
 }
 
 .intro>ul>li {
@@ -180,14 +179,12 @@ h1 {
 
 .icon {
   display: flex;
-  border: 1px solid red;
   justify-content: center;
   margin-top: 660px;
 }
 
 .Iphone {
   width: 200px;
-  border: 1px solid red;
   margin-right: 30px;
   padding-top: 100px;
   /* height: 400px; */
@@ -195,12 +192,10 @@ h1 {
 
 .Ipc {
   width: 580px;
-  border: 1px solid red;
 }
 
 .Itab {
   width: 320px;
-  border: 1px solid red;
   margin-top: 30px;
   margin-left: 30px;
 }
@@ -219,7 +214,7 @@ nav {
   font-family: Pretendard;
   border-bottom: 80px solid #fff;
   transform: translateX(100%);
-
+  z-index: 100;
 }
 
 nav.on {
@@ -229,7 +224,6 @@ nav.on {
 .gnb {}
 
 .gnb>li>a {
-  border: 1px solid white;
   text-align: center;
   display: block;
   font-size: 7rem;
@@ -246,30 +240,27 @@ nav.on {
 }
 
 .sideM {
-  border: 1px solid red;
   fill: #fff;
-  width: 140px;
+  width: 110px;
   display: block;
   margin: 0 auto;
   margin-top: 30px;
-  margin-bottom: 50px;
+  margin-bottom: 90px;
 
 
 }
 
 .sideclose {
-  border: 1px solid red;
   color: #fff;
   font-size: 4rem;
   cursor: pointer;
-  padding: 10px;
+  padding: 10px 0 0 20px;
 }
 
 /* --------------------------------------- */
 
 .about {
   position: relative;
-  height: 100vh;
 }
 
 .typo {
@@ -286,7 +277,7 @@ nav.on {
   position: absolute;
   top: 0;
   left: 30%;
-  margin-top: 10px;
+  margin-top: 6px;
   transform: translateX(-30%);
 }
 
@@ -297,7 +288,7 @@ nav.on {
   left: 25%;
   transform: translate(-35%, -29%);
   top: 29%;
-  padding-top: 6px;
+  padding-top: 10px;
 }
 
 .typo>ul>li {
@@ -330,10 +321,359 @@ nav.on {
   opacity: 1;
 }
 
+.about svg {
+  width: 540px;
+  position: absolute;
+  bottom: 50%;
+  right: 20%;
+}
+
+#nametxt path {
+  fill: transparent;
+  stroke: #fff;
+  stroke-width: 1.5;
+}
+
+#nametxt.on path {
+  stroke-dashoffset: 0 !important;
+}
+
+
+
+
+/* ----------------------------------------- */
+
 
 
 .profile {
   height: 50vh;
   background: #fff;
+  overflow: hidden;
+}
+
+/* .profile dl{display: flex;} */
+
+.profile ul {
+  width: 200px;
+  display: flex;
+}
+
+.profile ul>li {
+  flex: 1;
+}
+
+.grid {
+  background-size: 71px 70px;
+  background-image: linear-gradient(90deg, #0d32ff 1px, transparent 1px), linear-gradient(90deg, #0d32ff 1px, transparent 1px), linear-gradient(#0d32ff 1px, transparent 1px), linear-gradient(#0d32ff 1px, transparent 1px);
+}
+
+
+/* ---------------------------------------- */
+
+.design {
+  position: relative;
+  font-family: Pretendard;
+}
+
+.Dtop {
+  height: 50vh;
+  background: #fff;
+
+  color: #0d32ff;
+  position: relative;
+}
+
+.design>.grid {
+  background-size: 71px 70px;
+  background-image: linear-gradient(90deg, #0d32ff 1px, transparent 1px), linear-gradient(90deg, #0d32ff 1px, transparent 1px), linear-gradient(#0d32ff 1px, transparent 1px), linear-gradient(#0d32ff 1px, transparent 1px);
+}
+
+.Dtop>h1 {
+  font-size: 30rem;
+  font-weight: 900;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+
+.Dbottom {
+  height: 50vh;
+  background: #0d32ff;
+  position: relative;
+}
+
+.Dbottom .fileimg {
+  display: flex;
+  width: 700px;
+  border: 1px solid white;
+  justify-content: space-between;
+  position: absolute;
+  top: 50%;
+  right: 8%;
+  transform: translate(-8%, -50%);
+}
+
+.Dbottom li {
+  flex: 1;
+  text-align: center;
+  color: #fff;
+  font-weight: 600;
+  font-size: 1.3rem;
+  transition: all 0.5s ease 0s;
+}
+
+.Dbottom>p {
+  color: #fff;
+  font-size: 1.5rem;
+  font-weight: 600;
+}
+
+.Dbottom img {
+  width: 180px
+}
+
+.Dbottom .filename {
+  position: absolute;
+}
+
+/* -----------------------------------------*/
+
+.contact {
+  position: relative;
+  height: 100vh;
+  overflow: hidden;
+  background: #0d32ff;
+  color: #fff;
+}
+
+.contact span:nth-of-type(1) {
+  display: block;
+  width: 100%;
+  height: 10px;
+  background: transparent;
+  margin-bottom: 40px;
+}
+
+.contact span:nth-of-type(2) {
+  display: block;
+  width: 100%;
+  height: 10px;
+  background: #fff;
+}
+
+.contact span:nth-of-type(3) {
+  display: block;
+  width: 100%;
+  height: 10px;
+  background: transparent;
+  position: absolute;
+  bottom: 0;
+}
+
+.contact span:nth-of-type(4) {
+  display: block;
+  width: 100%;
+  height: 10px;
+  background: #fff;
+  position: absolute;
+  bottom: 40px;
+}
+
+.conCenter>img:nth-of-type(1) {
+  width: 900px;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+
+.conCenter>img:nth-of-type(2) {
+  width: 600px;
+  position: absolute;
+  top: 40%;
+  left: 50%;
+  transform: translate(-50%, -40%);
+}
+
+.contactline {
+  width: 100%;
+  height: 3px;
+  color: #fff;
+  display: inline-block;
+}
+
+.contact>p:nth-of-type(1) {
+  font-family: 'Shrikhand', cursive;
+  position: absolute;
+  top: 14%;
+  left: 50%;
+  transform: translate(-50%, -14%);
+  font-size: 2.1rem;
+}
+
+.contact>p:nth-of-type(2) {
+  font-family: 'Alfa Slab One', cursive;
+  position: absolute;
+  top: 50%;
+  right: 0;
+  transform: translate(0, -50%);
+  rotate: 90deg;
+  font-size: 1.6rem;
+}
+
+.contact>p:nth-of-type(3) {
+  font-family: 'Alfa Slab One', cursive;
+  position: absolute;
+  top: 50%;
+  left: 0;
+  transform: translateX(5%);
+  transform: translateY(-50%);
+  rotate: 270deg;
+  font-size: 1.6rem;
+}
+
+.contact>p:nth-of-type(4) {
+  font-family: 'Open Sans', sans-serif;
+  position: absolute;
+  left: 50%;
+  bottom: 10%;
+  transform: translate(-50%, 0);
+  font-weight: 900;
+  font-size: 1.43rem;
+}
+
+.contact>.conCenter>p {
+  position: absolute;
+  font-family: 'Alfa Slab One', cursive;
+  color: #f9d641;
+  left: 50%;
+  top: 60%;
+  transform: translate(-50%, -60%);
+  font-size: 2.7rem;
+  -webkit-text-stroke-width: 2px;
+  -webkit-text-stroke-color: #0d32ff;
+}
+
+
+
+/* scroll------------------------------------ */
+
+::-webkit-scrollbar {
+  width: 10px;
+}
+
+::-webkit-scrollbar-track {
+  background: #0d32ff;
+}
+
+::-webkit-scrollbar-thumb {
+  background: #fff;
+  transition: all 0.3s ease 0s;
+  border-radius: 10px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: #f9d641;
+}
+
+
+/* popup----------------------------------------------------------- */
+
+
+.whitebackground {
+  height: 100%;
+  width: 100%;
+  background: rgba(255, 255, 255, 0.883);
+  position: fixed;
+  top: 0;
+  left: 0;
+  z-index: 10;
+
+}
+
+.popup_page {
+  height: 90vh;
+  width: 95vw;
+  background: #fff;
+  overflow: hidden;
+  position: relative;
+  top: 40%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+
+/* 목업이미지 */
+.popup_page>.Pmockup>img {
+  position: absolute;
+  width: 590px;
+  margin-left: 100px;
+  margin-top: 100px;
+}
+
+/* 팝업이미지 */
+.popup_page .popupL img {
+  width: 544px;
+  object-fit: cover;
+}
+
+/* 창닫기버튼 */
+.popclose {
+  color: #0d32ff;
+  font-size: 4rem;
+  cursor: pointer;
+  padding: 10px 0 0 20px;
+}
+
+/* 왼쪽기차div영역 */
+.popupL {
+  width: 544px;
+  height: 544px;
+  position: absolute;
+  top: 266px;
+  left: 123px;
+}
+
+/* 기차ul */
+.poptrain {
+  width: 100%;
+  height: 100%;
+  position: relative;
+
+}
+
+
+.poptrain>li {
+  width: 100%;
+  height: 100%;
+  position: absolute;
+  opacity: 0;
+  left: 0;
+  top: 0;
+  pointer-events: none;
+  transition: all 0.5s ease 0s;
+}
+
+.poptrain>li.on {
+  opacity: 1;
+  pointer-events: auto;
+}
+
+/* 슬라이드 컨트롤러 */
+
+.controler {
+  position: absolute;
+  left: 50%;
+  top: 50%;
+  transform: translate(-50%, -50%);
+  width: 125%;
+  display: flex;
+  justify-content: space-between;
+}
+
+.controler>a>i {
+  font-size: 3rem;
+  cursor: pointer;
+  color: #0d32ff;
 
 }

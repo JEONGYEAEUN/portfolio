@@ -7,7 +7,7 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>PORTFOLIO</title>
   <!-- css -->
-  <link rel="stylesheet" href="./css/index.css">
+  <link rel="stylesheet" href="./css/index.css?ver=3">
   <!-- fontawesome -->
   <script src="https://kit.fontawesome.com/3f132683be.js" crossorigin="anonymous"></script>
   <!-- js -->
@@ -35,8 +35,21 @@
 </head>
 
 <body>
+  <nav class="sidemenu">
+    <span><i class="fa-solid fa-xmark sideclose"></i></span>
+    <img src="./svg/sidemenulogo.svg" alt="로고 화이트이미지" class="sideM">
+    <ul class="gnb">
+      <li><a href="#p1">HOME</a></li>
+      <li><a href="#p2">PROFILE</a></li>
+      <li><a href="#p3">DESIGN</a></li>
+      <li><a href="#p4">CONTACT</a></li>
+    </ul>
+  </nav>
   <div class="contents_wrap">
-    <div class="intro" id="page">
+
+
+
+    <div class="intro" id="p1">
       <span class="intrologo">
         <img src="./svg/logo.svg" alt="로고 이미지">
       </span>
@@ -55,25 +68,18 @@
         <img src="./svg/pcmockup.svg" alt="피씨 아이콘" class="Ipc">
         <img src="./svg/tabmockup.svg" alt="탭 아이콘" class="Itab">
       </section>
+
+      <img src="./svg/menuicon.svg" alt="메뉴 아이콘" class="introiconM">
     </div>
 
 
-    <img src="./svg/menuicon.svg" alt="메뉴 아이콘" class="introiconM">
 
 
-    <nav class="sidemenu">
-      <span><i class="fa-solid fa-xmark sideclose"></i></span>
-      <img src="./svg/sidemenulogo.svg" alt="로고 화이트이미지" class="sideM">
-      <ul class="gnb">
-        <li><a href="#">HOME</a></li>
-        <li><a href="#">PROFILE</a></li>
-        <li><a href="#">DESIGN</a></li>
-        <li><a href="#">CONTACT</a></li>
-      </ul>
-    </nav>
 
 
-    <div class="about" id="page">
+
+
+    <div class="about" id="p2">
       <section class="typo">
         <h2>UI/UX<br>Designer</h2>
         <ul class="keyword">
@@ -83,8 +89,8 @@
           <li>#세심함</li>
           <li>#꼼꼼함</li>
         </ul>
-        <svg id="nametxt" viewBox="0 0 546.78 193.78">
 
+        <svg id="nametxt" viewBox="0 0 546.78 193.78">
           <g id="Layer_2" data-name="Layer 2">
             <g id="Layer_1-2" data-name="Layer 1">
               <g class="cls-1">
@@ -103,7 +109,7 @@
 
 
 
-      <section class="profile">
+      <section class="profile grid">
         <dl>
           <dt>BIRTH</dt>
           <dd>1998.02.10</dd>
@@ -121,12 +127,12 @@
           <dt>SKILLS</dt>
           <dd>
             <ul>
-              <li><img src="./SVG/ps.svg" alt="포토샵 아이콘"></li>
-              <li><img src="./SVG/ai.svg" alt="일러스트 아이콘"></li>
-              <li><img src="./SVG/html.svg" alt="html 아이콘"></li>
-              <li><img src="./SVG/css.svg" alt="css 아이콘"></li>
-              <li><img src="./SVG/js.svg" alt="js 아이콘"></li>
-              <li><img src="./SVG/jq.svg" alt="jq 아이콘"></li>
+              <li><img src="./svg/ps.svg" alt="포토샵 아이콘"></li>
+              <li><img src="./svg/ai.svg" alt="일러스트 아이콘"></li>
+              <li><img src="./svg/html.svg" alt="html 아이콘"></li>
+              <li><img src="./svg/css.svg" alt="css 아이콘"></li>
+              <li><img src="./svg/js.svg" alt="js 아이콘"></li>
+              <li><img src="./svg/jq.svg" alt="jq 아이콘"></li>
             </ul>
           </dd>
         </dl>
@@ -136,453 +142,106 @@
 
 
 
-    <!-- <div class="design" id="page"> -->
-    <!-- <div class="Dtop">
+    <div class="design" id="p3">
+      <div class="Dtop grid">
         <h1>DESIGN</h1>
-      </div> -->
-    <!-- <div class="Dbottom">
+      </div>
+      <div class="Dbottom">
         <p>아이콘을 클릭하시면 제작한 디자인 결과물을 확인해 보실 수 있습니다.</p>
 
-        <ul>
+        <ul class="fileimg">
           <li class="popup">
-            <a href="#">
+            <a href="./myredesign/index.html">
               <img src="./svg/closefile.svg" alt="닫힌 파일 아이콘">
-              <p>POP-UP</p>
             </a>
           </li>
           <li class="banner">
             <a href="#">
               <img src="./svg/closefile.svg" alt="닫힌 파일 아이콘">
-              <P>BANNER</P>
             </a>
           </li>
           <li class="redesign">
             <a href="#">
               <img src="./svg/closefile.svg" alt="닫힌 파일 아이콘">
-              <p>RE-DESIGN</p>
             </a>
           </li>
         </ul>
-      </div> -->
-    <!-- <div class="popup_page">
-        <figure class="Pmockup">
-          <img src="./SVG/popupmockup.svg" alt="팝업용 목업">
-        </figure>
-        <section class="popupL">
-          <ul>
-            <li class="blackP">
-              <img src="./popup/Pop1.jpg" alt="블랙프라이데이 팝업">
-            </li>
-            <li class="holidaysP">
-              <img src="./popup/Pop2.jpg" alt="연말 팝업">
-            </li>
-            <li class="hallowenP">
-              <img src="./popup/pop3.jpg" alt="할로윈 팝업">
-            </li>
-            <li class="newyearsP">
-              <img src="./popup/Pop4.jpg" alt="신년 팝업">
-            </li>
-            <li class="rainyP">
-              <img src="./popup/Pop5.jpg" alt="장마철 기획전 팝업">
-            </li>
-            <li class="hanbokP">
-              <img src="./popup/Pop6.jpg" alt="한복의 날 팝업">
-            </li>
-            <li class="basketballP">
-              <img src="./popup/Pop7.jpg" alt="농구대회 팝업">
-            </li>
-            <li class="blossomP">
-              <img src="./popup/Pop8.jpg" alt="벚꽃축제 팝업">
-            </li>
-          </ul>
-        </section>
-        <section class="popupR">
-          <div class="popup_exp">
-            <dl>
-              <dt class="popTitle">블랙프라이데이 팝업</dt>
-              <dd>블랙프라이데이를 주제로 팝업 디자인을 하였습니다.<br>
-                일 년에 단 한 번 있는 한정 세일 기간에 걸맞게 전체적인<br> 컨셉을 시계로 설정하였고 블랙프라이데이라는 이름에<br>
-                집중하여 블랙 컬러를 배경색으로 설정하고 대표 타이포에<br> 포인트가 되도록 금색으로 설정하였습니다.</dd>
-              <dt>Color Palette</dt>
-              <dd>
-                <span></span>
-                <span></span>
-                <span></span>
-              </dd>
-              <dt>Font</dt>
-              <dd>
-                <ul class="font">
-                  <li>Prata Regular</li>
-                  <li>Open Sans</li>
-                </ul>
-              </dd>
-              <dt>Size</dt>
-              <dd>500x500px</dd>
-            </dl>
-          </div>
-          <div class="popup_exp">
-                        <dl>
-                          <dt class="popTitle">연말 팝업</dt>
-                          <dd>연말을 주제로 팝업 디자인을 하였습니다.<br>
-                            색을 최소로 사용하고 심플하게 구성을 짜보았습니다.<br>
-                            심플하지만 연말 특유의 따뜻한 감성은 가져가기 위해<br>
-                            폰트와 아이콘에 디자인적인 요소를 더했습니다.</dd>
-                          <dt>Color Palette</dt>
-                          <dd>
-                            <span></span>
-                            <span></span>
-                            <span></span>
-                          </dd>
-                          <dt>Font</dt>
-                          <dd>
-                            <ul class="font">
-                              <li>Amatic SC</li>
-                            </ul>
-                          </dd>
-                          <dt>Size</dt>
-                          <dd>500x500px</dd>
-                        </dl>
-                      </div>
-                      <div class="popup_exp">
-                        <dl>
-                          <dt class="popTitle">할로윈 팝업</dt>
-                          <dd>할로윈을 주제로 팝업 디자인을 하였습니다.<br>
-                            보라색과 주황색을 주요 색상으로 선택하고<br>
-                            일러스트 제작과 폰트 변형을 통해 곳곳에 테마에<br> 어울리는 재미 요소를 더해주었습니다.</dd>
-                          <dt>Color Palette</dt>
-                          <dd>
-                            <span></span>
-                            <span></span>
-                            <span></span>
-                            <span></span>
-                          </dd>
-                          <dt>Font</dt>
-                          <dd>
-                            <ul class="font">
-                              <li>Creepster</li>
-                            </ul>
-                          </dd>
-                          <dt>Size</dt>
-                          <dd>500x500px</dd>
-                        </dl>
-                      </div>
-                      <div class="popup_exp">
-                        <dl>
-                          <dt class="popTitle">신년 팝업</dt>
-                          <dd>신년을 주제로 팝업 디자인을 하였습니다.<br>
-                            해돋이를 전체적인 컨셉으로 정하고 지난 한 해와<br>
-                            올해의 맞닿은 시간을 떠오르는 해와 바다 표면에<br>
-                            비친 달로 표현하였습니다. 전통적인 스타일의 테두리로<br>
-                            꾸밈을 더하여 한국적인 멋을 더했습니다.</dd>
-                          <dt>Color Palette</dt>
-                          <dd>
-                            <span></span>
-                            <span></span>
-                            <span></span>
-                            <span></span>
-                          </dd>
-                          <dt>Font</dt>
-                          <dd>
-                            <ul class="font">
-                              <li>Noto Serif HK</li>
-                              <li>HY신명조</li>
-                            </ul>
-                          </dd>
-                          <dt>Size</dt>
-                          <dd>500x500px</dd>
-                        </dl>
-                      </div>
-                      <div class="popup_exp">
-                        <dl>
-                          <dt class="popTitle">장마철 기획전 팝업</dt>
-                          <dd>장마철 기획전을 주제로 팝업 디자인을 하였습니다.<br>
-                            우산이 펴져 있는 모습을 꽃으로 연상해 떠올릴 수 있도록<br> 이파리 디테일을 더해주었습니다.<br>
-                            장마를 뜻하는 '오란비'라는 단어를 제목으로 설정하여<br>
-                            사용자의 흥미를 유발할 수 있도록 하였습니다.</dd>
-                          <dt>Color Palette</dt>
-                          <dd>
-                            <span></span>
-                            <span></span>
-                            <span></span>
-                            <span></span>
-                            <span></span>
-                            <span></span>
-                          </dd>
-                          <dt>Font</dt>
-                          <dd>
-                            <ul class="font">
-                              <li>HS봄바람체 2.1</li>
-                              <li>Noto Sans KR</li>
-                            </ul>
-                          </dd>
-                          <dt>Size</dt>
-                          <dd>500x500px</dd>
-                        </dl>
-                      </div>
-                      <div class="popup_exp">
-                        <dl>
-                          <dt class="popTitle">한복의 날 팝업</dt>
-                          <dd>10월 21일 한복의 날을 주제로 팝업 디자인을 하였습니다.<br>
-                            큰 배경을 한복 저고리 모양으로 만들어 한복의 날<br>
-                            이라는 것을 한눈에 알 수 있도록 하였고, 한국의<br>
-                            오방색을 포인트 색으로 사용해 한국의 멋을 더해주었습니다.</dd>
-                          <dt>Color Palette</dt>
-                          <dd>
-                            <span></span>
-                            <span></span>
-                            <span></span>
-                            <span></span>
-                            <span></span>
-                            <span></span>
-                          </dd>
-                          <dt>Font</dt>
-                          <dd>
-                            <ul class="font">
-                              <li>Gugi Regular</li>
-                              <li>Noto Sans KR</li>
-                              <li>Noto Serif HK</li>
-                            </ul>
-                          </dd>
-                          <dt>Size</dt>
-                          <dd>500x500px</dd>
-                        </dl>
-                      </div>
-                      <div class="popup_exp">
-                        <dl>
-                          <dt class="popTitle">농구대회 팝업</dt>
-                          <dd>농구대회를 주제로 팝업 디자인을 하였습니다.<br>
-                            전체적인 구성을 분할하여 색 조합을 하였고 여러<br>
-                            오브젝트를 과감하게 배치하여 깔끔하지만, 스포츠<br>
-                            특유의 활기찬 느낌을 더해주었습니다.</dd>
-                          <dt>Color Palette</dt>
-                          <dd>
-                            <span></span>
-                            <span></span>
-                            <span></span>
-                            <span></span>
-                          </dd>
-                          <dt>Font</dt>
-                          <dd>
-                            <ul class="font">
-                              <li>Tilt Warp Regular</li>
-                              <li>Noto Sans KR</li>
-                            </ul>
-                          </dd>
-                          <dt>Size</dt>
-                          <dd>500x500px</dd>
-                        </dl>
-                      </div>
-                      <div class="popup_exp">
-                        <dl>
-                          <dt class="popTitle">벚꽃축제 팝업</dt>
-                          <dd>벚꽃축제를 주제로 팝업 디자인을 하였습니다.<br>
-                            벛꽃이 피어난 모습을 구름처럼 표현해 주었습니다<br>
-                            제목에 쓰인 'ㅊ'을 벚꽃으로 표현해 디자인적인<br> 재미를 더해주었습니다.</dd>
-                          <dt>Color Palette</dt>
-                          <dd>
-                            <span></span>
-                            <span></span>
-                            <span></span>
-                            <span></span>
-                          </dd>
-                          <dt>Font</dt>
-                          <dd>
-                            <ul class="font">
-                              <li>Sunflower</li>
-                              <li>에스코어 드림</li>
-                            </ul>
-                          </dd>
-                          <dt>Size</dt>
-                          <dd>500x500px</dd>
-                        </dl>
-                      </div>
-        </section>
-      </div> -->
+        <ul class="filename">
+          <li>POP-UP</li>
+          <li>BANNER</li>
+          <li>RE-DESIGN</li>
+        </ul>
+      </div>
+    </div>
 
-    <!-- <div class="banner_page">
-        <section class="Bmockup">
-          <img src="./svg/bannermockup.svg" alt="배너용 목업">
-          <ul>
-            <li>블랙프라이데이</li>
-            <li>브랜드 </li>
-            <li>새해 이벤트</li>
-            <li>장마철 기획 세일</li>
-          </ul>
-          <p>
-            https:// 위에 있는 Tab창을 눌러 원하는 슬라이드로 이동하실 수도 있습니다.
-          </p>
-        </section>
-        <section class="bannerT">
-          <ul>
-            <li class="blackB">
-              <img src="./banner/banner1.jpg" alt="블랙프라이데이 배너">
-            </li>
-            <li class="brandB">
-              <img src="./banner/Banner2.jpg" alt="브랜드 광고 배너">
-            </li>
-            <li class="newyearB">
-              <img src="./banner/Banner3.jpg" alt="새해 이벤트 배너">
-            </li>
-            <li class="rainyB">
-              <img src="./banner/banner4.jpg" alt="장마철 기획 세일 배너">
-            </li>
-          </ul>
-        </section>
-        <section class="bannerB">
-          <div class="banner_exp">
-            <section class="bannerB_Left">
-              <h3>블랙프라이데이 배너</h3>
-              <p>블랙프라이데이를 주제로 배너 디자인을 하였습니다.<br>
-                전체적인 컨셉은 쇼핑백으로 설정하였고 심플한 구성이지만<br>
-                강렬한 색감과 과감한 문구 배치를 통해 준비된 이벤트가<br> 한 눈에 들어오도록 연출하였습니다.</p>
-            </section>
-            <section class="bannerB_Center">
-              <dl>
-                <dt>
-                  Color Palette
-                </dt>
-                <dd>
-                  <span></span>
-                  <span></span>
-                  <span></span>
-                  <span></span>
-                </dd>
-                <dt>
-                  Size
-                </dt>
-                <dd>1920x500px</dd>
-              </dl>
-            </section>
-            <section class="bannerB_Right">
-              <dt>Font</dt>
-              <dd>
-                <ul>
-                  <li>Noto Sans KR</li>
-                  <li>Tw Cen MT Condensed</li>
-                </ul>
-              </dd>
-            </section>
-          </div>
-          <div class="banner_exp">
-            <section class="bannerB_Left">
-              <h3>브랜드 배너</h3>
-              <p>브랜드 광고를 주제로 배너 디자인을 하였습니다.<br>
-                민트초코라는 맛을 하나의 테마로 설정하고 전체적인 배경을 초콜릿에<br>
-                민트가 빠져있다는 설정으로 민트잎 사진을 배치해 디자인에 재미를<br> 더해주었습니다.</p>
-            </section>
-            <section class="bannerB_Center">
-              <dl>
-                <dt>
-                  Color Palette
-                </dt>
-                <dd>
-                  <span></span>
-                  <span></span>
-                </dd>
-                <dt>
-                  Size
-                </dt>
-                <dd>1920x500px</dd>
-              </dl>
-            </section>
-            <section class="bannerB_Right">
-              <dt>Font</dt>
-              <dd>
-                <ul>
-                  <li>Noto Sans KR</li>
-                  <li>Tw Cen MT Condensed</li>
-                </ul>
-              </dd>
-            </section>
-          </div>
-          <div class="banner_exp">
-            <section class="bannerB_Left">
-              <h3>새해 이벤트 배너</h3>
-              <p>새해 이벤트를 주제로 배너 디자인을 하였습니다.<br>
-                새해의 검은 토끼띠를 위해 준비된 이벤트인 만큼 제목의 글씨 색상을<br> 검은색으로 정하고 검정 토끼 캐릭터를 추가해 주었습니다. 전통 문양과<br>
-                소나무 이미지를 배치하여 새해 특유의 분위기를 더해주었습니다.</p>
-            </section>
-            <section class="bannerB_Center">
-              <dl>
-                <dt>
-                  Color Palette
-                </dt>
-                <dd>
-                  <span></span>
-                  <span></span>
-                </dd>
-                <dt>
-                  Size
-                </dt>
-                <dd>1920x500 px</dd>
-              </dl>
-            </section>
-            <section class="bannerB_Right">
-              <dt>Font</dt>
-              <dd>
-                <ul>
-                  <li>ELAND 나이스OTF</li>
-                  <li>ELAND 초이스OTF</li>
-                </ul>
-              </dd>
-            </section>
-          </div>
-          <div class="banner_exp">
-            <section class="bannerB_Left">
-              <h3>장마철 기획 세일 배너</h3>
-              <p>장마철 기획 세일을 주제로 배너 디자인을 하였습니다.<br>
-                화면 분할과 색상 조합을 통해 장마철 실외와 실내를 표현했습니다.<br>
-                제목 타이포 옆쪽에 우산 아이콘을 추가하여 디자인 요소를<br> 
-                더해주었습니다.</p>
-            </section>
-            <section class="bannerB_Center">
-              <dl>
-                <dt>
-                  Color Palette
-                </dt>
-                <dd>
-                  <span></span>
-                  <span></span>
-                </dd>
-                <dt>
-                  Size
-                </dt>
-                <dd>1920x500 px</dd>
-              </dl>
-            </section>
-            <section class="bannerB_Right">
-              <dt>Font</dt>
-              <dd>
-                <ul>
-                  <li>LINE Seed Sans KR</li>
-                  <li>에스코어 드림</li>
-                </ul>
-              </dd>
-            </section>
-          </div>
-        </section>
-      </div> -->
-    <!-- <div class="redesign_page">
-        <figure class="redesignL">
-          <img src="./svg/redesignmockupS.svg" alt="리디자인 목업">
-          <img src="./svg/redesignmockupP.svg" alt="리디자인 목업">
-          <section class="redesignTxt">
-            <h4>RESPONSIVE REDESIGN</h4>
-            <ul>
-              <li><a href="#">리디자인 기획 바로가기</a></li>
-              <li><a href="#">리디자인 사이트 바로가기</a></li>
-              <li><a href="https://showbox.co.kr/">쇼박스 사이트 바로가기</a></li>
-            </ul>
-          </section>
-        </figure>
-        <section class="redesignR">
+
+
+
+
+
+    <div class="contact" id="p4">
+      <span class="conLine"></span>
+      <span class="conLine"></span>
+      <span class="conLine"></span>
+      <span class="conLine"></span>
+
+      <p>JYE's Design</p>
+      <p>WHO AM I ?</p>
+      <p>ABOUT MY DESIGN</p>
+      <p>THANK YOU FOR WATCHING THIS PORTFOLIO</p>
+      <div class="conCenter">
+        <img src="./svg/contactCircle.svg" alt="컨텍트 오브젝트">
+        <img src="./svg/contact.svg" alt="컨텍트 타이포">
+        <p>yeaeun9892@gmail.com</p>
+      </div>
+    </div>
+  </div>
+
+  <div class="whitebackground">
+    <span><i class="fa-solid fa-xmark popclose"></i></span>
+    <div class="popup_page">
+      <figure class="Pmockup">
+        <img src="./svg/popupmockup.svg" alt="팝업용 목업">
+      </figure>
+      <section class="popupL station">
+        <ul class="poptrain">
+          <li class="blackP on">
+            <img src="./popup/Pop1.jpg" alt="블랙프라이데이 팝업">
+          </li>
+          <li class="holidaysP">
+            <img src="./popup/Pop2.jpg" alt="연말 팝업">
+          </li>
+          <li class="hallowenP">
+            <img src="./popup/pop3.jpg" alt="할로윈 팝업">
+          </li>
+          <li class="newyearsP">
+            <img src="./popup/Pop4.jpg" alt="신년 팝업">
+          </li>
+          <li class="rainyP">
+            <img src="./popup/Pop5.jpg" alt="장마철 기획전 팝업">
+          </li>
+          <li class="hanbokP">
+            <img src="./popup/Pop6.jpg" alt="한복의 날 팝업">
+          </li>
+          <li class="basketballP">
+            <img src="./popup/Pop7.jpg" alt="농구대회 팝업">
+          </li>
+          <li class="blossomP">
+            <img src="./popup/Pop8.jpg" alt="벚꽃축제 팝업">
+          </li>
+        </ul>
+        <div class="controler">
+          <a href="#" class="popprev"><i class="fa-solid fa-angle-left"></i></a>
+          <a href="#" class="popnext"><i class="fa-solid fa-angle-right"></i></a>
+        </div>
+      </section>
+      <section class="popupR">
+        <div class="popup_exp">
           <dl>
-            <dt class="redesignTitle">쇼박스 리디자인</dt>
-            <dd>대한민국의 영화 투자·제작·배급회사 쇼박스를
-              리디자인하여 퍼블리싱하였습니다.<br>
-              모바일화면과 PC 화면에서 대응될 수 있도록
-              반응형으로 퍼블리싱하였습니다.
-            </dd>
+            <dt class="popTitle">블랙프라이데이 팝업</dt>
+            <dd>블랙프라이데이를 주제로 팝업 디자인을 하였습니다.<br>
+              일 년에 단 한 번 있는 한정 세일 기간에 걸맞게 전체적인<br> 컨셉을 시계로 설정하였고 블랙프라이데이라는 이름에<br>
+              집중하여 블랙 컬러를 배경색으로 설정하고 대표 타이포에<br> 포인트가 되도록 금색으로 설정하였습니다.</dd>
             <dt>Color Palette</dt>
             <dd>
               <span></span>
@@ -592,34 +251,235 @@
             <dt>Font</dt>
             <dd>
               <ul class="font">
-                <li>Noto Sans KR</li>
-                <li>Pretendard</li>
-                <li>Epilogue</li>
+                <li>Prata Regular</li>
+                <li>Open Sans</li>
               </ul>
             </dd>
-            <dt>기여도</dt>
-            <dd>
-              <ul>
-                <li>디자인 100%</li>
-                <li>퍼블리싱 100%</li>
-              </ul>
-            </dd>
+            <dt>Size</dt>
+            <dd>500x500px</dd>
           </dl>
-        </section>
-      </div> -->
-    <!-- </div> -->
-    <!-- <div class="contact" id="page">
-      <p>JYE's Design</p>
-      <p>ABOUT MY DESIGN</p>
-      <p>WHO AM I?</p>
-      <p>THANK YOU FOR WATCHING THIS PORTFOLIO</p>
-      <div class="conCenter">
-        <img src="./svg/contactCircle.svg" alt="컨텍트 오브젝트">
-        <img src="./svg/contact.svg" alt="컨텍트 타이포">
-        <p>E.MAIL yeaeun9892@gmail.com</p>
-      </div>
-    </div> -->
+        </div>
+
+
+
+
+      </section>
+    </div>
   </div>
+
+
+
+
+  <!-- <div class="banner_page">
+              <section class="Bmockup">
+                <img src="./svg/bannermockup.svg" alt="배너용 목업">
+                <ul>
+                  <li>블랙프라이데이</li>
+                  <li>브랜드 </li>
+                  <li>새해 이벤트</li>
+                  <li>장마철 기획 세일</li>
+                </ul>
+                <p>
+                  https:// 위에 있는 Tab창을 눌러 원하는 슬라이드로 이동하실 수도 있습니다.
+                </p>
+              </section>
+              <section class="bannerT">
+                <ul>
+                  <li class="blackB">
+                    <img src="./banner/banner1.jpg" alt="블랙프라이데이 배너">
+                  </li>
+                  <li class="brandB">
+                    <img src="./banner/Banner2.jpg" alt="브랜드 광고 배너">
+                  </li>
+                  <li class="newyearB">
+                    <img src="./banner/Banner3.jpg" alt="새해 이벤트 배너">
+                  </li>
+                  <li class="rainyB">
+                    <img src="./banner/banner4.jpg" alt="장마철 기획 세일 배너">
+                  </li>
+                </ul>
+              </section>
+              <section class="bannerB">
+                <div class="banner_exp">
+                  <section class="bannerB_Left">
+                    <h3>블랙프라이데이 배너</h3>
+                    <p>블랙프라이데이를 주제로 배너 디자인을 하였습니다.<br>
+                      전체적인 컨셉은 쇼핑백으로 설정하였고 심플한 구성이지만<br>
+                      강렬한 색감과 과감한 문구 배치를 통해 준비된 이벤트가<br> 한 눈에 들어오도록 연출하였습니다.</p>
+                  </section>
+                  <section class="bannerB_Center">
+                    <dl>
+                      <dt>
+                        Color Palette
+                      </dt>
+                      <dd>
+                        <span></span>
+                        <span></span>
+                        <span></span>
+                        <span></span>
+                      </dd>
+                      <dt>
+                        Size
+                      </dt>
+                      <dd>1920x500px</dd>
+                    </dl>
+                  </section>
+                  <section class="bannerB_Right">
+                    <dt>Font</dt>
+                    <dd>
+                      <ul>
+                        <li>Noto Sans KR</li>
+                        <li>Tw Cen MT Condensed</li>
+                      </ul>
+                    </dd>
+                  </section>
+                </div>
+                <div class="banner_exp">
+                  <section class="bannerB_Left">
+                    <h3>브랜드 배너</h3>
+                    <p>브랜드 광고를 주제로 배너 디자인을 하였습니다.<br>
+                      민트초코라는 맛을 하나의 테마로 설정하고 전체적인 배경을 초콜릿에<br>
+                      민트가 빠져있다는 설정으로 민트잎 사진을 배치해 디자인에 재미를<br> 더해주었습니다.</p>
+                  </section>
+                  <section class="bannerB_Center">
+                    <dl>
+                      <dt>
+                        Color Palette
+                      </dt>
+                      <dd>
+                        <span></span>
+                        <span></span>
+                      </dd>
+                      <dt>
+                        Size
+                      </dt>
+                      <dd>1920x500px</dd>
+                    </dl>
+                  </section>
+                  <section class="bannerB_Right">
+                    <dt>Font</dt>
+                    <dd>
+                      <ul>
+                        <li>Noto Sans KR</li>
+                        <li>Tw Cen MT Condensed</li>
+                      </ul>
+                    </dd>
+                  </section>
+                </div>
+                <div class="banner_exp">
+                  <section class="bannerB_Left">
+                    <h3>새해 이벤트 배너</h3>
+                    <p>새해 이벤트를 주제로 배너 디자인을 하였습니다.<br>
+                      새해의 검은 토끼띠를 위해 준비된 이벤트인 만큼 제목의 글씨 색상을<br> 검은색으로 정하고 검정 토끼 캐릭터를 추가해 주었습니다. 전통 문양과<br>
+                      소나무 이미지를 배치하여 새해 특유의 분위기를 더해주었습니다.</p>
+                  </section>
+                  <section class="bannerB_Center">
+                    <dl>
+                      <dt>
+                        Color Palette
+                      </dt>
+                      <dd>
+                        <span></span>
+                        <span></span>
+                      </dd>
+                      <dt>
+                        Size
+                      </dt>
+                      <dd>1920x500 px</dd>
+                    </dl>
+                  </section>
+                  <section class="bannerB_Right">
+                    <dt>Font</dt>
+                    <dd>
+                      <ul>
+                        <li>ELAND 나이스OTF</li>
+                        <li>ELAND 초이스OTF</li>
+                      </ul>
+                    </dd>
+                  </section>
+                </div>
+                <div class="banner_exp">
+                  <section class="bannerB_Left">
+                    <h3>장마철 기획 세일 배너</h3>
+                    <p>장마철 기획 세일을 주제로 배너 디자인을 하였습니다.<br>
+                      화면 분할과 색상 조합을 통해 장마철 실외와 실내를 표현했습니다.<br>
+                      제목 타이포 옆쪽에 우산 아이콘을 추가하여 디자인 요소를<br> 
+                      더해주었습니다.</p>
+                  </section>
+                  <section class="bannerB_Center">
+                    <dl>
+                      <dt>
+                        Color Palette
+                      </dt>
+                      <dd>
+                        <span></span>
+                        <span></span>
+                      </dd>
+                      <dt>
+                        Size
+                      </dt>
+                      <dd>1920x500 px</dd>
+                    </dl>
+                  </section>
+                  <section class="bannerB_Right">
+                    <dt>Font</dt>
+                    <dd>
+                      <ul>
+                        <li>LINE Seed Sans KR</li>
+                        <li>에스코어 드림</li>
+                      </ul>
+                    </dd>
+                  </section>
+                </div>
+              </section>
+            </div> -->
+
+
+  <!-- <div class="redesign_page">
+              <figure class="redesignL">
+                <img src="./svg/redesignmockupS.svg" alt="리디자인 목업">
+                <img src="./svg/redesignmockupP.svg" alt="리디자인 목업">
+                <section class="redesignTxt">
+                  <h4>RESPONSIVE REDESIGN</h4>
+                  <ul>
+                    <li><a href="#">리디자인 기획 바로가기</a></li>
+                    <li><a href="#">리디자인 사이트 바로가기</a></li>
+                    <li><a href="https://showbox.co.kr/">쇼박스 사이트 바로가기</a></li>
+                  </ul>
+                </section>
+              </figure>
+              <section class="redesignR">
+                <dl>
+                  <dt class="redesignTitle">쇼박스 리디자인</dt>
+                  <dd>대한민국의 영화 투자·제작·배급회사 쇼박스를
+                    리디자인하여 퍼블리싱하였습니다.<br>
+                    모바일화면과 PC 화면에서 대응될 수 있도록
+                    반응형으로 퍼블리싱하였습니다.
+                  </dd>
+                  <dt>Color Palette</dt>
+                  <dd>
+                    <span></span>
+                    <span></span>
+                    <span></span>
+                  </dd>
+                  <dt>Font</dt>
+                  <dd>
+                    <ul class="font">
+                      <li>Noto Sans KR</li>
+                      <li>Pretendard</li>
+                      <li>Epilogue</li>
+                    </ul>
+                  </dd>
+                  <dt>기여도</dt>
+                  <dd>
+                    <ul>
+                      <li>디자인 100%</li>
+                      <li>퍼블리싱 100%</li>
+                    </ul>
+                  </dd>
+                </dl>
+              </section>
+            </div> -->
 </body>
 
 </html>
