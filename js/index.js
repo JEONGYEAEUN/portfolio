@@ -35,6 +35,30 @@ $(document).ready(function () {
     }
   })
 
+  //팝업이미지 팝업창
+
+
+  $(".fileimg>.popup").click(function (e) {
+    e.preventDefault()
+    $(".whitebackground").addClass("on")
+    $(".popup_page").addClass("on")
+  })
+
+  $(".popupR span.popclose").click(function (e) {
+    e.preventDefault()
+    $(".whitebackground").removeClass("on")
+    $(".popup_page").removeClass("on")
+
+  })
+
+  $(document).on("click", ".popupR span.popclose", function (e) {
+    e.preventDefault()
+    $(".whitebackground").removeClass("on")
+    $(".popup_page").removeClass("on")
+  })
+
+
+
   // 팝업 페이드인 슬라이드
 
   let count = 0;
@@ -46,6 +70,7 @@ $(document).ready(function () {
     }
     $(".poptrain>li").removeClass("on")
     $(".poptrain>li").eq(count).addClass("on")
+    $(".popupR").html(SliderTextArray[count])
   })
 
   $(".popprev").click(function (e) {
@@ -56,9 +81,49 @@ $(document).ready(function () {
     }
     $(".poptrain>li").removeClass("on")
     $(".poptrain>li").eq(count).addClass("on")
+    $(".popupR").html(SliderTextArray[count])
   })
 
 
+  //배너 슬라이드 팝업창
+
+  $(".fileimg>.banner").click(function (e) {
+    e.preventDefault()
+    $(".whitebackground2").addClass("on")
+    $(".banner_page").addClass("on")
+  })
+
+  $(".banner_page>span.bannerclose").click(function (e) {
+    e.preventDefault()
+    $(".whitebackground2").removeClass("on")
+    $(".banner_page").removeClass("on")
+
+  })
+
+  $(document).on("click", ".banner_page>span.bannerclose", function (e) {
+    e.preventDefault()
+    $(".whitebackground2").removeClass("on")
+    $(".banner_page").removeClass("on")
+  })
+
+
+
+  //배너슬라이드 
+
+  $(".bannext").click(function (e) {
+    count++
+    e.preventDefault()
+    //기차가 왼쪽으로 500px
+    if (count > 3) { count = 0 } //0은 처음으로 돌아가게 하는 기능
+    $(".bannertrain").css("transform", "translateX(" + (-25 * count) + "%)")
+  })
+
+  $(".banprev").click(function (e) {
+    e.preventDefault()
+    count--
+    if (count < 0) { count = 3 }
+    $(".bannertrain").css("transform", "translateX(" + (-25 * count) + "%)")
+  })
 
   //스크롤바를 움직일 때 키워드가 뜨도록
 
@@ -156,7 +221,50 @@ $(document).ready(function () {
     $(this).attr("src", changedsrc)
   })
 
-  let SliderTextArray = [`     <div class="popup_exp">
+  let SliderTextArray = [
+    `  <div class="popup_exp">
+          <dl>
+            <dt class="popTitle">블랙프라이데이 팝업</dt>
+            <dd>블랙프라이데이를 주제로 팝업 디자인을 하였습니다.<br>
+              일 년에 단 한 번 있는 한정 세일 기간에 걸맞게 전체적인<br> 컨셉을 시계로 설정하였고 블랙프라이데이라는 이름에<br>
+              집중하여 블랙 컬러를 배경색으로 설정하고 대표 타이포에<br> 포인트가 되도록 금색으로 설정하였습니다.</dd>
+            <dt>Color Palette</dt>
+            <dd class="colorList">
+              <span style="
+    width: 30px;
+    height: 30px;
+    background: #ff0000;
+    display: block;
+    border-radius: 50%;
+    "></span>
+              <span style="
+    width: 30px;
+    height: 30px;
+    background: #000000;
+    display: block;
+    border-radius: 50%;
+    "></span>
+              <span style="
+    width: 30px;
+    height: 30px;
+    background: #d4af37;
+    display: block;
+    border-radius: 50%;
+    "></span>
+            </dd>
+            <dt>Font</dt>
+            <dd>
+              <ul class="font">
+                <li>Prata Regular</li>
+                <li>Open Sans</li>
+              </ul>
+            </dd>
+            <dt>Size</dt>
+            <dd>500x500px</dd>
+          </dl>
+        </div>
+        <span class="popclose"><i class="fa-solid fa-xmark"></i></span>`,
+    `<div class="popup_exp">
           <dl>
             <dt class="popTitle">연말 팝업</dt>
             <dd>연말을 주제로 팝업 디자인을 하였습니다.<br>
@@ -164,10 +272,30 @@ $(document).ready(function () {
               심플하지만 연말 특유의 따뜻한 감성은 가져가기 위해<br>
               폰트와 아이콘에 디자인적인 요소를 더했습니다.</dd>
             <dt>Color Palette</dt>
-            <dd>
-              <span></span>
-              <span></span>
-              <span></span>
+            <dd class="colorList">
+               <span style="
+    width: 30px;
+    height: 30px;
+    background: #010723;
+    display: block;
+    border-radius: 50%;
+    "></span>
+              <span style="
+    width: 30px;
+    height: 30px;
+    background: #ffffd4;
+    border:1px solid #b2b2b2;
+    box-sizing: border-box;
+    display: block;
+    border-radius: 50%;
+    "></span>
+              <span style="
+    width: 30px;
+    height: 30px;
+    background: #4c5564;
+    display: block;
+    border-radius: 50%;
+    "></span>
             </dd>
             <dt>Font</dt>
             <dd>
@@ -178,19 +306,40 @@ $(document).ready(function () {
             <dt>Size</dt>
             <dd>500x500px</dd>
           </dl>
-        </div>
-        <div class="popup_exp">
+        </div> 
+        <span class="popclose"><i class="fa-solid fa-xmark"></i></span>`,
+    `<div class="popup_exp">
           <dl>
             <dt class="popTitle">할로윈 팝업</dt>
             <dd>할로윈을 주제로 팝업 디자인을 하였습니다.<br>
               보라색과 주황색을 주요 색상으로 선택하고<br>
               일러스트 제작과 폰트 변형을 통해 곳곳에 테마에<br> 어울리는 재미 요소를 더해주었습니다.</dd>
             <dt>Color Palette</dt>
-            <dd>
-              <span></span>
-              <span></span>
-              <span></span>
-              <span></span>
+            <dd class="colorList">
+             <span style="
+    width: 30px;
+    height: 30px;
+    background: #24002d;
+    display: block;
+    border-radius: 50%;
+    "></span>
+              <span style="
+    width: 30px;
+    height: 30px;
+    background: #fefffd;
+    border:1px solid #b2b2b2;
+    box-sizing: border-box;
+    display: block;
+    border-radius: 50%;
+    "></span>
+              <span style="
+    width: 30px;
+    height: 30px;
+    background: #f1933c;
+    display: block;
+    border-radius: 50%;
+    "></span>
+    
             </dd>
             <dt>Font</dt>
             <dd>
@@ -201,8 +350,8 @@ $(document).ready(function () {
             <dt>Size</dt>
             <dd>500x500px</dd>
           </dl>
-        </div>
-        <div class="popup_exp">
+        </div> <span class="popclose"><i class="fa-solid fa-xmark"></i></span>`,
+    `<div class="popup_exp">
           <dl>
             <dt class="popTitle">신년 팝업</dt>
             <dd>신년을 주제로 팝업 디자인을 하였습니다.<br>
@@ -211,11 +360,35 @@ $(document).ready(function () {
               비친 달로 표현하였습니다. 전통적인 스타일의 테두리로<br>
               꾸밈을 더하여 한국적인 멋을 더했습니다.</dd>
             <dt>Color Palette</dt>
-            <dd>
-              <span></span>
-              <span></span>
-              <span></span>
-              <span></span>
+            <dd class="colorList">
+                  <span style="
+    width: 30px;
+    height: 30px;
+    background: #F07235;
+    display: block;
+    border-radius: 50%;
+    "></span>
+              <span style="
+    width: 30px;
+    height: 30px;
+    background: #EFD88C;
+    display: block;
+    border-radius: 50%;
+    "></span>
+              <span style="
+    width: 30px;
+    height: 30px;
+    background: #3765DA;
+    display: block;
+    border-radius: 50%;
+    "></span>
+     <span style="
+    width: 30px;
+    height: 30px;
+    background: #EFBAC0;
+    display: block;
+    border-radius: 50%;
+    "></span>
             </dd>
             <dt>Font</dt>
             <dd>
@@ -227,8 +400,8 @@ $(document).ready(function () {
             <dt>Size</dt>
             <dd>500x500px</dd>
           </dl>
-        </div>
-        <div class="popup_exp">
+        </div>  <span class="popclose"><i class="fa-solid fa-xmark"></i></span>`,
+    `<div class="popup_exp">
           <dl>
             <dt class="popTitle">장마철 기획전 팝업</dt>
             <dd>장마철 기획전을 주제로 팝업 디자인을 하였습니다.<br>
@@ -236,13 +409,35 @@ $(document).ready(function () {
               장마를 뜻하는 '오란비'라는 단어를 제목으로 설정하여<br>
               사용자의 흥미를 유발할 수 있도록 하였습니다.</dd>
             <dt>Color Palette</dt>
-            <dd>
-              <span></span>
-              <span></span>
-              <span></span>
-              <span></span>
-              <span></span>
-              <span></span>
+            <dd class="colorList">
+               <span style="
+    width: 30px;
+    height: 30px;
+    background: #4da5db;
+    display: block;
+    border-radius: 50%;
+    "></span>
+              <span style="
+    width: 30px;
+    height: 30px;
+    background: #c09ff4;
+    display: block;
+    border-radius: 50%;
+    "></span>
+              <span style="
+    width: 30px;
+    height: 30px;
+    background: #ffa764;
+    display: block;
+    border-radius: 50%;
+    "></span>
+     <span style="
+    width: 30px;
+    height: 30px;
+    background: #f2bdf2;
+    display: block;
+    border-radius: 50%;
+    "></span>
             </dd>
             <dt>Font</dt>
             <dd>
@@ -254,8 +449,8 @@ $(document).ready(function () {
             <dt>Size</dt>
             <dd>500x500px</dd>
           </dl>
-        </div>
-        <div class="popup_exp">
+        </div> <span class="popclose"><i class="fa-solid fa-xmark"></i></span>`,
+    `<div class="popup_exp">
           <dl>
             <dt class="popTitle">한복의 날 팝업</dt>
             <dd>10월 21일 한복의 날을 주제로 팝업 디자인을 하였습니다.<br>
@@ -263,13 +458,37 @@ $(document).ready(function () {
               이라는 것을 한눈에 알 수 있도록 하였고, 한국의<br>
               오방색을 포인트 색으로 사용해 한국의 멋을 더해주었습니다.</dd>
             <dt>Color Palette</dt>
-            <dd>
-              <span></span>
-              <span></span>
-              <span></span>
-              <span></span>
-              <span></span>
-              <span></span>
+            <dd class="colorList">
+               <span style="
+    width: 30px;
+    height: 30px;
+    background: #af1c1d;
+    display: block;
+    border-radius: 50%;
+    "></span>
+              <span style="
+    width: 30px;
+    height: 30px;
+    background: #2c418c;
+    display: block;
+    border-radius: 50%;
+    "></span>
+              <span style="
+    width: 30px;
+    height: 30px;
+    background: #ebc751;
+    display: block;
+    border-radius: 50%;
+    "></span>
+     <span style="
+    width: 30px;
+    height: 30px;
+    background: #f9f6e7;
+    border:1px solid #b2b2b2;
+    box-sizing: border-box;
+    display: block;
+    border-radius: 50%;
+    "></span>
             </dd>
             <dt>Font</dt>
             <dd>
@@ -282,8 +501,8 @@ $(document).ready(function () {
             <dt>Size</dt>
             <dd>500x500px</dd>
           </dl>
-        </div>
-        <div class="popup_exp">
+        </div> <span class="popclose"><i class="fa-solid fa-xmark"></i></span>`,
+    `<div class="popup_exp">
           <dl>
             <dt class="popTitle">농구대회 팝업</dt>
             <dd>농구대회를 주제로 팝업 디자인을 하였습니다.<br>
@@ -291,11 +510,28 @@ $(document).ready(function () {
               오브젝트를 과감하게 배치하여 깔끔하지만, 스포츠<br>
               특유의 활기찬 느낌을 더해주었습니다.</dd>
             <dt>Color Palette</dt>
-            <dd>
-              <span></span>
-              <span></span>
-              <span></span>
-              <span></span>
+            <dd class="colorList">
+               <span style="
+    width: 30px;
+    height: 30px;
+    background: #ff922b;
+    display: block;
+    border-radius: 50%;
+    "></span>
+              <span style="
+    width: 30px;
+    height: 30px;
+    background: #00153d;
+    display: block;
+    border-radius: 50%;
+    "></span>
+              <span style="
+    width: 30px;
+    height: 30px;
+    background: #dfbd8d;
+    display: block;
+    border-radius: 50%;
+    "></span>
             </dd>
             <dt>Font</dt>
             <dd>
@@ -307,19 +543,36 @@ $(document).ready(function () {
             <dt>Size</dt>
             <dd>500x500px</dd>
           </dl>
-        </div>
-        <div class="popup_exp">
+        </div> <span class="popclose"><i class="fa-solid fa-xmark"></i></span>`,
+    `<div class="popup_exp">
           <dl>
             <dt class="popTitle">벚꽃축제 팝업</dt>
             <dd>벚꽃축제를 주제로 팝업 디자인을 하였습니다.<br>
               벛꽃이 피어난 모습을 구름처럼 표현해 주었습니다<br>
               제목에 쓰인 'ㅊ'을 벚꽃으로 표현해 디자인적인<br> 재미를 더해주었습니다.</dd>
             <dt>Color Palette</dt>
-            <dd>
-              <span></span>
-              <span></span>
-              <span></span>
-              <span></span>
+            <dd class="colorList">
+              <span style="
+    width: 30px;
+    height: 30px;
+    background: #70d2fc;
+    display: block;
+    border-radius: 50%;
+    "></span>
+              <span style="
+    width: 30px;
+    height: 30px;
+    background: #fbdae1;
+    display: block;
+    border-radius: 50%;
+    "></span>
+              <span style="
+    width: 30px;
+    height: 30px;
+    background: #e88b98;
+    display: block;
+    border-radius: 50%;
+    "></span>
             </dd>
             <dt>Font</dt>
             <dd>
@@ -331,7 +584,7 @@ $(document).ready(function () {
             <dt>Size</dt>
             <dd>500x500px</dd>
           </dl>
-        </div>`]
+        </div> <span class="popclose"><i class="fa-solid fa-xmark"></i></span>`]
 
 
 

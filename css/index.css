@@ -353,8 +353,8 @@ nav.on {
 
 /* .profile dl{display: flex;} */
 
-.profile ul {
-  width: 200px;
+.profile ul.certLi {
+  width: 358px;
   display: flex;
 }
 
@@ -366,6 +366,57 @@ nav.on {
   background-size: 71px 70px;
   background-image: linear-gradient(90deg, #0d32ff 1px, transparent 1px), linear-gradient(90deg, #0d32ff 1px, transparent 1px), linear-gradient(#0d32ff 1px, transparent 1px), linear-gradient(#0d32ff 1px, transparent 1px);
 }
+
+.aboutme {
+  margin-top: 70px;
+  margin-left: 356px;
+  font-family: Pretendard;
+  font-size: 1.3rem;
+  font-weight: 600;
+}
+
+
+
+.profile dt {
+  display: inline-block;
+  width: 75px;
+  vertical-align: top;
+  line-height: 26px;
+  text-align: justify;
+  margin-right: 100px;
+
+}
+
+.profile dt:after {
+  content: '';
+  display: inline-block;
+  width: 100%;
+}
+
+.profile dd {
+  display: inline-block;
+
+
+  vertical-align: top;
+  line-height: 26px;
+  letter-spacing: -0.2px;
+}
+
+
+
+.profile ul.skillslist {
+  width: 480px;
+  display: flex;
+}
+
+.profile ul.skillslist>li {
+  margin-right: 30px;
+
+
+}
+
+
+
 
 
 /* ---------------------------------------- */
@@ -403,10 +454,17 @@ nav.on {
   position: relative;
 }
 
+
+.Dbottom .desP {
+  position: absolute;
+  top: 50%;
+  left: 10%;
+  transform: translate(-10%, -50%);
+}
+
 .Dbottom .fileimg {
   display: flex;
   width: 700px;
-  border: 1px solid white;
   justify-content: space-between;
   position: absolute;
   top: 50%;
@@ -415,7 +473,7 @@ nav.on {
 }
 
 .Dbottom li {
-  flex: 1;
+
   text-align: center;
   color: #fff;
   font-weight: 600;
@@ -425,17 +483,59 @@ nav.on {
 
 .Dbottom>p {
   color: #fff;
-  font-size: 1.5rem;
-  font-weight: 600;
+  font-size: 1.7rem;
+  font-weight: 500;
 }
 
 .Dbottom img {
-  width: 180px
+  width: 180px;
+  object-fit: cover;
 }
 
-.Dbottom .filename {
+.click>p {
+  font-family: 'Gaegu', cursive;
   position: absolute;
+  top: 61%;
+  left: 47%;
+  color: #fff;
+  font-size: 2rem;
+  animation: clickme 1s cubic-bezier(0.25, 0.1, 0.81, 1.14) 0s infinite alternate
 }
+
+.click>svg {
+  position: absolute;
+  top: 60%;
+  left: 50%;
+  fill: none;
+  stroke: #fff;
+  stroke-miterlimit: 10;
+  stroke-dasharray: 15;
+  width: 100px;
+  animation: blink-effect 1s step-end infinite;
+
+}
+
+@keyframes clickme {
+  50% {
+    rotate: 10deg;
+  }
+}
+
+@keyframes blink-effect {
+  50% {
+    opacity: 0;
+  }
+}
+
+
+
+
+
+
+
+
+
+
 
 /* -----------------------------------------*/
 
@@ -584,23 +684,30 @@ nav.on {
 .whitebackground {
   height: 100%;
   width: 100%;
-  background: rgba(255, 255, 255, 0.883);
+  background: rgba(255, 255, 255, 0.79);
   position: fixed;
   top: 0;
   left: 0;
   z-index: 10;
+  pointer-events: none;
+  display: none;
+}
 
+.whitebackground.on {
+  display: block;
+  pointer-events: auto;
 }
 
 .popup_page {
   height: 90vh;
-  width: 95vw;
+  width: 90vw;
   background: #fff;
   overflow: hidden;
-  position: relative;
-  top: 40%;
+  position: absolute;
+  top: 50%;
   left: 50%;
   transform: translate(-50%, -50%);
+  opacity: 0;
 }
 
 /* 목업이미지 */
@@ -615,14 +722,6 @@ nav.on {
 .popup_page .popupL img {
   width: 544px;
   object-fit: cover;
-}
-
-/* 창닫기버튼 */
-.popclose {
-  color: #0d32ff;
-  font-size: 4rem;
-  cursor: pointer;
-  padding: 10px 0 0 20px;
 }
 
 /* 왼쪽기차div영역 */
@@ -659,7 +758,149 @@ nav.on {
   pointer-events: auto;
 }
 
-/* 슬라이드 컨트롤러 */
+
+.popup_exp {
+  position: absolute;
+  top: 20%;
+  right: 20%;
+  font-family: Pretendard;
+}
+
+.popup_exp dt {
+  font-size: 1.6rem;
+  margin-bottom: 30px;
+  font-weight: 600;
+}
+
+.popupR span.popclose {
+  font-size: 3rem;
+  color: #0d32ff;
+  position: absolute;
+  margin: 10px;
+}
+
+.font {
+  display: flex;
+}
+
+.font>li {
+  margin-right: 20px;
+  box-sizing: border-box;
+}
+
+.font>li:last-of-type {
+  margin-right: 0;
+}
+
+.popup_exp dd {
+  margin-bottom: 30px;
+  font-size: 1.3rem;
+}
+
+.colorList {
+  display: flex;
+}
+
+.colorList>span {
+  margin-right: 10px;
+}
+
+.popup_page.on {
+  opacity: 1;
+}
+
+
+/* ------------------------------------------------ */
+
+.whitebackground2 {
+  height: 100%;
+  width: 100%;
+  background: rgba(255, 255, 255, 0.79);
+  position: fixed;
+  top: 0;
+  left: 0;
+  z-index: 10;
+  pointer-events: none;
+  display: none;
+}
+
+.whitebackground2.on {
+  display: block;
+  pointer-events: auto;
+}
+
+.banner_page {
+  background: #fff;
+  height: 90vh;
+  width: 90vw;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  opacity: 0;
+}
+
+.banner_page.on {
+  opacity: 1;
+}
+
+.banner_page>.Bmockup>img {
+  position: absolute;
+  width: 1500px;
+  left: 50%;
+  transform: translateX(-50%);
+}
+
+/* 배너이미지 */
+.banner_page .bannerT img {
+  width: 1350px;
+  object-fit: cover;
+}
+
+/* 왼쪽기차div영역 */
+.bannerT {
+  width: 1350px;
+  height: 350px;
+  position: absolute;
+  overflow: hidden;
+  left: 50%;
+  top: 22%;
+  transform: translateX(-50%);
+}
+
+/* 기차ul */
+.bannertrain {
+  width: 400%;
+  height: 100%;
+  display: flex;
+  position: relative;
+  transition: all 1s ease 0s;
+}
+
+
+.bannertrain>li {
+  width: 25%;
+  height: 100%;
+}
+
+.bannertrain>li img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+
+/* 창닫기버튼 */
+.popclose {
+  color: #0d32ff;
+  font-size: 4rem;
+  cursor: pointer;
+  padding: 10px 0 0 20px;
+  z-index: 100;
+}
+
+
+/* 팝업 슬라이드 컨트롤러 */
 
 .controler {
   position: absolute;
@@ -675,5 +916,76 @@ nav.on {
   font-size: 3rem;
   cursor: pointer;
   color: #0d32ff;
+  z-index: 10000;
+}
 
+/* 배너슬라이드 컨트롤러 */
+
+.Bcontroler {
+  position: absolute;
+  left: 50%;
+  top: 42%;
+  transform: translate(-50%, -45%);
+  width: 85%;
+  display: flex;
+  justify-content: space-between;
+}
+
+.Bcontroler>a>i {
+  font-size: 6rem;
+  cursor: pointer;
+  color: #0d32ff;
+  z-index: 10000;
+}
+
+/* 창닫기버튼 */
+.bannerclose {
+  color: #0d32ff;
+  font-size: 4rem;
+  cursor: pointer;
+  padding: 10px 0 0 20px;
+  z-index: 100;
+}
+
+/* ------------------------------- */
+
+.banner_exp {
+  position: absolute;
+  display: flex;
+  position: absolute;
+  top: 66%;
+  left: 15%;
+  font-family: Pretendard;
+}
+
+.banner_exp h3 {
+  font-weight: 600;
+  font-size: 1.7rem;
+  margin-bottom: 30px;
+}
+
+.banner_exp p {
+  font-size: 1.2rem;
+}
+
+.Bmockup ul {
+  display: flex;
+  font-family: Pretendard;
+  position: absolute;
+  top: 6%;
+  transform: translate(-6%, );
+  left: 19%;
+  font-size: 1.4rem;
+}
+
+.Bmockup ul>li:nth-of-type(1) {
+  margin-right: 110px;
+}
+
+.Bmockup ul>li:nth-of-type(2) {
+  margin-right: 140px;
+}
+
+.Bmockup ul>li:nth-of-type(3) {
+  margin-right: 80px;
 }
